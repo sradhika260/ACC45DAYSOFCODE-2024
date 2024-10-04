@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int max(int a, int b) {
+    return (a > b) ? a : b;
+}
+
+int main() {
+    int X, Y;
+    scanf("%d %d", &X, &Y);
+
+    int points_A = 500;
+    int points_B = 1000;
+
+    int score1 = (points_A - 2 * X) + (points_B - 4 * (X + Y));
+
+    int score2 = (points_B - 4 * Y) + (points_A - 2 * (X + Y));
+
+    // The maximum score Chef can achieve
+    int result = max(score1, score2);
+
+    printf("%d\n", result);
+
+    return 0;
+}
