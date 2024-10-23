@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);  // Read the number of test cases
+
+    while (T--) {
+        int R1, R2, R3, R4;
+        scanf("%d %d %d %d", &R1, &R2, &R3, &R4);  // Read the four referee decisions
+
+        // Check if all referees agree the ball is inside limits
+        if (R1 == 0 && R2 == 0 && R3 == 0 && R4 == 0) {
+            printf("IN\n");
+        } else {
+            printf("OUT\n");
+        }
+    }
+
+    return 0;
+}
